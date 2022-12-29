@@ -1,0 +1,63 @@
+const testData = ["vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg", "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", "ttgJtRGJQctTZtZT", "CrZsJsPPZsGzwwsLwLmpwMDw"];
+
+const realData = ["rZTmmqbBrmBvSTCwDDtlwjqnqnnq", "dhgQHhPfVgPlPdFzFzFgdptCQjtnwCntjsCppRtRND", "lVdVHWGPvTvmrrBW", "GmJBqwPLhfPBfJfvfffFmwtjDprpzVpVMpcDrVjzzcjpML", "HgWnRnWggWbNTWbCnPCgCnsjcVDrjMrdzjprMMrzcHDrDr", "SsSsRsCSPSPBvtJt", "BLtwwTBmLSTlMsjdZmFZZP", "hzbzNNrbqQbhQDDrhCprbhDCpvFJJPjMZJZgjjPdlvZjZvvl", "fbNrqrVDfdfGzqcHTBTVHwcTSHcH", "lcDdcrCDCRHJHBllPR", "tNGQwQhtzLhJBRHbPMBMjGBj", "NZZZpVqqFqpQpCTZcTnrTrnJJC", "BSNLNzbLLsMGSDLSsSBdVwTVQFdTVTtqgTwNVN", "lRjplvmWpgrqwlVFFr", "mfRCpWwvChZCBGSzZG", "mDSlGBGwhGhmLHCQnMMVMLMVFJ", "WTNfjNgzNdgNWfsgsWWcWgfrVrnnFHQbrHvFrVVdHMrnCr", "FpcggcNttFfqSqDtwBDmhZ", "HzNsHbGsddQHPrsNPNsTnNjMbjVbcVlMLjMjLtlttjjv", "CQfBZDQfWJlJlLJhvMMv", "WwwmWRfFwmCmwwzQzzzrdGNHFzNT", "JDvhJfdZZTdCTnmmTH", "qbPcsqbjcbstjbgnvqpRCBTCmgCm", "WPbPtbtVjWQsPvSVzSZLMDMVfLZJ", "NjMbTZPjHjbdBqNBqFqDFz", "LCcLSRLStRrLHShCtRfcpCtpQVqqDFDFqDdFpBddDQQFdB", "htCGtrSJLfScvwJvggbgwHgW", "hmPTmfFPwBFHhsBstJldltstVDSVrrpD", "CjzNGQjnRMMvMngMLGRVRBltVrVppqptVSqlVJ", "cLBjgjGGGCgvLLnhZThwcfTHPTcPmw", "SzwsVwcGsTVTmzmgjsLsmWWnGJZbbJbZtZqnDJntGq", "NHQvpvNRflHvQpPMlbtbZqbFDnWlqVrD", "dpPQVdpHMPRBpfCszCmsLsmcjdSg", "wZZGGrnGVvZGPTcTnGvVCVpmpJSgCJtNpWgWVgmC", "MdMRqqzMLDtQDQmzJg", "HBMdRLLBLBdbbBLHlRjLrHPPnTvGtTcwhGrhZtvh", "fcbcPWmvPvftWbDNVJJDrrhsJs", "wQvzqvpQQzHQwTTNVhrBGJTJ", "ZCMvzHMRCqggmWmndPngnn", "VjvVJvjdgjJNTVgdpjRttsTHSsbFqqRHSbBR", "nrfZLZCZnLnCCncZCrCQLSsFHHqtsSsSSBcHGtHsFh", "nQlLMrmwZtmwCMmMwZmtLLggvNvVjjNJglpDgzNdJJvN", "bCjQbTzCBlCvpqPTbZphtWWRhtddmDRRdRhPhh", "sLJsnJFcsnJcMMjNnfsjDDcDWcRgggtmwVRtVmhh", "sMsJLFfGrfFnrSNJjHzlTCCCQzpbBpzQzSBQ", "gWRzWwcrzWcgZHRzHmcpTLTgTLhQDSgFFLTpLD", "bBJfvJCssGJNjvPmbbmbLTQFTLQp", "jsCqBJsVsGBqCfNcWMmrRWlWqmwMcz", "cLjncLlQbllRhlnQTRblwtndsgpWdqgmnWNWmGpvWzdgzz", "DrFJBFFHZrrDDVJSNmpsWdzVpmzdqqzpzq", "FJPPHfDJPDPCZSZHFSDPCJtwRjClttNbwwjQLjcRhLlb", "tZZRtWCRtsspLRqSVqbPDfVvlfFDqV", "dgvMcccHHDHNrrbf", "wGwdgBBhhcBhCvTZvtCppp", "LRRNFfffFzzcrGRffNfcGNzJnrnhjdDMHHnrWdlmhddHnjrh", "BvStvwSqqCZVqtvpZBWMMhhFhWdmdMWMhm", "TTvqSbwqTPpZPzQsQRffsFGQ", "phZZpGbGVmqDbPTF", "tlNwlncnzwddcrGPlFmjlTTlfmjD", "zntnczBMdvBnnvnthHHZMJhCLpZSSRGQ", "ZwLLnbCDfClLZzZwDzCCZDbmNNdNtdBVNTNdNWMFtTFzTVFd", "vlPlJRgRhQcPQQjpcRQJBBthNdtddtthtFMNWqMq", "ppJgsgrJpJgslgrgRSPDDDLZLnHbrLHbwLbHfb", "sBrNSTsrgDDMSjpPWVVqhppbsbtz", "HTJfHwFwRFCnCPbzbzVzbVWq", "QTcvvcmHnwGvvnRNrLglNNLNDZcZZL", "qNNHSSFgbhLHHNfBwlJjQwwBcwQN", "WZnVrZrMpVvZmVjwBvzBQRflJJcz", "pWVGpWnmrmWjDmtnWVVZmtPFPCSbPgqgLSqtHCgTHgHH", "QcQHqhpqQGbvbqHNqfhsQfHczZMlBZdZBlSFFZpZlFMDRFBM", "TPVgmmrjtWjwrtwgLmTwLPMDZlMDMnSzzZgglzldBlgZ", "PVtPrmPddrPCVTNqcHvQbHsCQNGh", "PnsrrsdsSrnCvJCJBVwNqcHPRwNLWHwV", "pjTQlgGWMjZBbRHHHZcbVV", "htpThhlMjFdWrtDrfrsn", "GZjHFHgjpbZQbgpHdgpjjBMTQsMJWzWRcsLMCRWzcz", "ltwPlhwPSlwmmDhfrMwlzLLTSWJRssCBJWzsccCc", "nfrnrntPnDmDDnPrwmvlVGdGFFNqjVHNjbGFjgFNMp", "BjHBvHHqnBHrnnvclqjqplRRRQSfRpJQwPswStJsJQSt", "wVFGWdVZVhWVDzVdZDSfRJtLLZJPtJRJSfJP", "TDhCdWmNwzTWVmDBvMlrHmcqvHBMng", "HpDpHvjvCjDHZHVWJSCrnrJgnNwr", "rtQhssBTlRMblLBTtNnJFVSnnwVVwVWNnb", "BhrchlmBBszfjmzzffDf", "MMcJtJmVmnppVmSSpbCRvDvDRLDqvBRRCCMC", "GWNNGGGfrjlHHHNZZZLNZt", "jGrgfFjQrdhlhhgQFrVpnpVgmStPSJSPzJPP", "wvJNJNtfGGphQQjFdGWj", "DzSLzPczBrqzPrLMjSpjWMlSpQgwWd", "zPHRqBLqqHzPcBDPsznZCwJsnfVnmZmtVntC", "ttVWftWgGlWGfgtLtNddrNDdNvsLrdLdNm", "JCcFSnbBqbRbSBCBqTFSQCmwMjRsrDRNNjDddssNfDrr", "cBHBTTQFJJCCJQcCbCcqnSftHtZhHzWghPzVZpPglVVW", "ZfSGFQdbrHQSbFFqlwLjCjLPlqwj", "gmWJgNppJrgMcchzhmzNczqRsVRCjVRVsWjVRLRqqCVq", "zDTchzJJJhgJJmBJhBTJBggtQHGrdbfnHHDHGvftStvHdf", "LdRCgCDvCbCdnLnCvpGtQlhffNlhtSlQNtQlhb", "BTJTVFJrqMVmBmdTMFNHNVQQQSHHffQhNlHQ", "MqcBmqPdFBdjPPBTJqpZDDpgGDpgWCcvGCLp", "gzFbjgqljdqblbbddBZTMvTBdMsVvm", "SHpGWBCtSPhNpPSSSpwSNGNSTLTVVsZsLrvRrRvVLLRCvTvm", "NwhHwPhDtSGpbDcBQqczbBBj", "BhzLDSflLlTTRfqGpJZZQsqfNF", "ndCmMHHRPbCjCwVPVmjtwdMVsNGJQpZQsJqJqNJdFqJZFrNq", "CtwbRcRbttHBSgTcgShvTz", "pffmzCtppTSWtzdhbJdZvvHVnvdHVV", "WMlLWRGGQWMGrQJcVbvbHnvQHbhv", "LFwRFDlqFPWfTszp", "sbfFTbbbzJzfbJZSbnsnfTchGWWJGlhWvvBGltgVttgWgg", "LLLDpHwMDLmNjmChVWWBwthrGQvgQl", "dLMLDMLBNddPHmpMPfqPcPzcsSbbccqb", "MNGMPvHTnfTfgSFrSMMgwFMw", "QQRpjBsqhRQsldpqRQQQmjZFtrrzSFFccvSWwwjwFWZS", "smsBbQlRlmDpDBqpqblpLbLLfTfNVPVVGnTvTLbb", "gsmFlVCShjVwNNDNgWBNHg", "dMtQvtQRrtbLMqMnqqsq", "GQfGQPRtrPddPtvcvcQZRvRpJlVJFTlpZTVJpFJsSCFJjh", "LFmpcmhNfhhnjStshM", "qWTCCQrqlQBQcJCqrJdlHDdnRtngRStnPjgDSgSsjM", "CZWrqTbllrClJZWbVfmmZcvVzmGZmfpv", "qJLCqjwjjJnFqnDQQfqlQMfMQlMg", "zmHWPhGGZVGpcCWMsWRRfBBRDs", "bdpCcGmZdNFTwnSjrd", "TttqjWvQjZTtzwWtdBCMdBMqdGCBRnhR", "bpJlcNFVzbcBhCMMCChbMP", "cJVgrplDcslrlrpFzwTHQsSTWLQtjWvLWj", "hWlmVhlpcNpScSVtNbjrbGqdHGjgQrdrRdqG", "LPBDCvFszTCzFzFzBBffHrJrrGHRHsgRjsjrjJqc", "DTCMMzzvvnDvLvLDTTBTCMFBpWpthShmwmmWmwchptnhwWWt", "dfHqNQSQQNQBHHZJfJCMCfVcRJCZ", "GjLrDjgvFrFzjDgPGvLzgmmjCslRZMMCststJMlRcPVTRJJM", "vjmmvrnzDDLVzrdSWNBQnWwdhHhH", "jTmMBMNBTVSqNgBTjgNMqMTgWZttCmLfpQQZQWtLCdCGGtWC", "zzVVbhFcbzstWCZpsftsQZ", "whwhwPnDhHRhbRVHcSNllvMnNnjMjSBJMl", "nSvQgHWtZvHlgtvqgqngjSFFFDNSfsbbbjGfcsSr", "PPVRdNwRLhdLLCCwbscBBfGfbLjjjDbs", "zVPPhMhMmhhVppRpMNRPhMQnHqZtHZvgQzWgQgvnqnnq", "JdFHDSShfgDNMhGTBlwGGJqjjJTr", "PCnWnsvpzPnmLvmsQGRGWrwlWbljwTjFGl", "PtnLzQCQLfSFctdNhN", "cTrjrCNrLjTFCTrLCdSVNVlJVSVVGJftNp", "swQHQDsQGRZGffQV", "ggffMhhvgswDgDnhhfCcTjrcTjWBWCMmcjjc", "wGHvHCvWlMLlhGWwvvwlNnRBRdDNDBLDRVVDFdBD", "MtJJTPTTQNFRNFRfTn", "crSsmmJjmtgWmMhwWMCw", "sQQHWGsWcWWrZQQshNtHFNBCNBqHFwHB", "jSLbMSdfjSjFtFghNtFBMt", "RSdmtLmSLLzSLdjjdTTbVvsVVsvZcZQzWPWcQrrW", "PCCTzTgDgzVZZLgcgcdswMMMgs", "hSrqdqRQSjqtNqcsGWcGLwMGMf", "tlQJRJSRjpJjZPdpDTdHbzTn", "pqBGDDtQBDLVhfCtCZVV", "bTNFcljgbdlFjbldjFdTTcfZqZVsLhgfVLhVhZVHfZwC", "McJjFbvTWvmRqGRr", "JRcsJDfgncfHnqSBqGSTGQsTTz", "vlBlLlpNWpPhVmTQpQSzqbqQ", "CBPvjFNMlFhCCRtZJZZHfg", "RFQQTdQQLtThDhfRcHdLfFcHJCWtbbPnJWJPNJbnJsvstvJv", "ZmMlMlwwMrVzwVqrSqmZrqbplpNWFbWJnvvspWWNslNs", "gwwmFrgMGgFqGTHRhHjDRTHH", "dNfQvLdQsvSLsHsLBgNWVggJJCWCDJgnJJ", "ZTGcflFlFRfhbwhbPcbbbWVWrMVMnDJCCWmVnDJCmF", "lTfZTpjjZhPhRcqtBtsdSQpqQvtv", "frfccJzjTBwWwcJwjrwcBVCVTRCGnpsGGSmpVSSpDH", "hhhvghZvZlZvghPbdtqGpGVCRHGGmsRmpsvGRV", "MdPCNqdtgZdZgcWMLzcffBcWzM", "LdsfZNRsRWvvfLSsCpSgCDJbPcCp", "MqTVtHHThllGMthlBHzcSzGGSFppPgbJDFbF", "nVHwVlHmlhRWdjjjLvwD", "whhWFjjzhGmGCrFFFzvtZsLZVStNZWLNpvtv", "nqPMBdMQBqJnnfqdsSNfpvtZsSNtNpLp", "HJHnQHqQlhwLlhzmGh", "nMlmnfHmfjjmflLlLdzJTrsrBLJJLBbBSJrJ", "pZRpFFDWctFPNtWvbbrTqrszTbqbcBqr", "RpRGNPPvPFsNvflmdfwMGHhmmH", "PjPzphfpJFPvFRHDbP", "QlLlBcvBvnWCWcVCnFTTSnFDNdSRRRHN", "sVtlVcVtmqjMJphrfvJs", "dRRHRfrdRHHlCTTprlNCvhVVvhzpQhVvtmntmhtz", "JMDJBLwQMBDDwZgJnhSzhmWStMvzbbmm", "PPwJwGqPGQcDcHHjCqRlRCjrCN", "GgGgbGSGzGbMBBzGDVFbDMRpmcWWTTfcFTchsJdcWJchTsch", "NCqCttLZrCPQtNrtWqfhWJJqscmTJwsc", "ZClvLCLmPjnPllPvCLrmnDRjpDzGpMRDRRDBGBgSzb", "tvwCtDMQvJJPJtvQprjrjrvBjsTZTWTj", "gFzgldFZSlSbgFlZmGmcFqsppjsLqrBsLBrqqWWjdB", "FlcbhhNNbmHmcbSSzzggwDDQDwJnVCVHPtMVnnZQ", "hrCnnrFrCvFHzVFdmmFm", "GDTBsSfDDBRwfDsQbSdjHHVlqpmpgqWqpH", "TBDBDBQBwcsPsPGQswPcZvJMrJhnrNhrNNnHJM", "CztfzfZLBjMqZZWZgT", "VPcblQhJvtgbvbgb", "wwFQwVRPRchwcrJcPzfRpzspBfzfnSCzmt", "FMnmnQnFNdQFRtmFmfNsCsjfpfrHHfVffV", "DlLqDPwGlbVCdVbddbsr", "GPDzLhqwLqDMFdFJRWzQzd", "CSDSrMqnVSCTsPGPZpnPPGvP", "jhBhhqBQQlhgjthBhlhJpLlwLLPwsswsGZpWPLvP", "dgJQzgFjzjJFzzdHFzzzJMmNHCrSMSCSNbRqDCMCmR", "cvSPvzWwzcTbVWSPbppWVjsGjdHdQSlNsQSdNGqsHZ", "MRmCfmFBfRJfjqrdNMZHZQjQ", "qgFtChDCFgmCnppPnczPbcLpnL", "RllsdrhQvcVqmVzQcm", "gGgnrZZMrFWFpZcccVmHqjVmHHnJ", "ZrMWTTbbGMpbtgCTTZgZCWCLhwdsLvhhhPhNSldvPwPNfNlR", "ffMqqznPPMzHfdfcdBJGTMVTGjRmMMTBjr", "vtDwSwpmDsmQZswWSDhhDQGrjTgJBglRsjTTjVRBVTBl", "ZthhQStwppSSvbvNDtWwnnbffmPnHPFHqmzFbLFq", "CcHPmPcTJTqNCPqbqJqLgNJrjWtrftjrrnBnsWtjtBsfTB", "ZRLwhzwLRlhLpdlpjftBBnBjWsBBvn", "QhzhlwDdMzwFSwRLMJqqcSmqNPgmqNHNVP", "WzTWppwcQNppbQrJHhhrJfcdfnsr", "MDMLlLqjvqSBvVCLGJhnJsrDnnrDdhDffZ", "BLMCBCBlLlGSJvSPBMLqGJVwwQzPpNRWmTRzmzpWWFmTbQ", "WpWpWsfcBFjwGgqqtTQrTpgg", "JLHNPPvLJRZdnNJZHRzGGTzjrtMqMJlQzztt", "vHHnbDnLnHRCRnvdZdbHLNPfBfBhcffmcSSsDjcVwVBmcS", "DDZlblRRLQcNpJNhpL", "VPrdJfBFFBBWBrdvJPCBBdfhqcFhchNQcpNgzqcjphqFjp", "mWVPfMWWfBMWWwPrWvJHDbZGZmZRtDbsDbSb", "PDwwBzvRRzPCBPgnrwvvCDsSSccWscFTnSshWnZsSZcF", "GJtNGHfLbQtQQJQGhhhShgSZWVWJjSFF", "tmHlfGfMlBzrRDMggz", "gSBNwDNJglSwlDMtTCsZzStTsSCC", "hhfGdGcFhrqFmQddrhvvrdGRRtQMTHMCsbZbZtRTsbZsQs", "mrmrFqqqccdhWjGcnLpBDWgNWpCBlgLW", "WgmBsqMBnLLGnGnJtFgbbTwHttTwHF", "cQjcfpVQfCCPSMjCcCPSPjVwbtTlTtwJbTvJJHbzHFFJ", "PCZDCZffCdpQCdDWrGGsnLqWhnrM", "gppVszSgMPMPstzNpPMQpnGfDJhfnGLLGnfLfQlLfh", "rBFcCcrbmbJJJWhbhLVL", "wqcmRFZqmcvvCZBcRvcVwNsztSPzHstSgzMNSgpS", "qzLJRZfpRZtNNMSfftFN", "QDnPHCCGvbQnnCwMMlcFgsgHFFlNlV", "rPCMQnbdhRLqJLzhzB", "dfdrfqBqBtRwBsFR", "cDczzSMzDcSGSQbCfFjRFZtZCZmtwZRt", "bVcJSbVbSDllNrrWWNdvWf", "WSPPWlppCQlZPGqPjhcjfs", "JJrJrRTHNTNLbbNLcfzzSfSzGTjsqZsj", "FVRFNgVRbDbdwlWpSnvQnVQM", "znJTCRCSvRpzVBjWJdBBBVNb", "gggcfGDrGDZqwhwfGBjbHVSVdtdjtBShWj", "ZrgmqmGDGfDPmrfwPmsqZPfCpsFFnFvlSMCLLvpSRFFMvL", "qhhfgzzSGDSZSgfrcjhcjCCndnbjdr", "FPTTTwBHBPJMJVJBGwmjvCmBdjjNNcrjncNc", "GwTttMsTtHFtVFtDplSDzgRpDqsfpD", "vzwsPlvFFdJGjQwdJw", "HHNbpDTbVMvTpmMHvddtRtJJjjJRdLmLGj", "HbqHcbMvlWrqzWFW", "hMJMJBhPTnDMJJTGmmGmwDpRzRpFWz", "lSZPPNvbNllPpGRFwwzRNGgm", "bHZCZbvrttlZClqbHbsrbnQMThdJBQhVQBPdscnPQB", "ZRNZfffHLfDLgfNlHWwhChWzzVdcVH", "jpJmJjvnTtSjtJvQWldPWcBdPSdWzzcz", "jGGsGsFFFGnJtTvvTszZNqqNgrsDLRDqLqrL", "rrblpnfnVVfspgrppnMrpsrGdGdzgddzPFCjCzjzzzjtDC", "TRWTJwThJhRvwZWvJBZvqDzQzGBPCzdHGjdGGGttzj", "JSZmTZZwWvqhwqrrVnrLnPmbsbPr", "MdhjZhZZDTdPDcgCSLfgCpCL", "vvwtnwnssznwJnwvBbBBHHRSSfLLcpWfSWWzcLRTRWpf", "snJtHJHmbBsrswNtsnjhlhqZPqTjjTjQMPGr", "gmSnWMMzvvNWCNWCJJph", "QfqjcbcRGGjcwhNppNqMptdNHL", "rGPbflPfwPvlFFvTTMlg", "trTdMJvtlLntbCRN", "GBZsGFGBcRbZCRNR", "SSGFmFjqVNFVssjSVjqjvMMQvgTmMgMMQWMmTdhJ", "GcNcdNdwMZSqNZSSScSdqGwDrCmJMVrCmHmVVCFVJDrmFV", "jTvsRsWbjjbQQfvTThFVZVTVDJVHlCFr", "BjnBPfRWBnRsnvBsRBQQSSGzpZLdgwcLZqzgzPLg", "clNrNpjbNpbRrCpsRlrVtjwVZwttttZVgMHwZS", "FJBBDhJDTQFThqssvPJBBvHMWLwgwSHtWLZMwZgwSg", "qQJfdJDhGsBBDFJBnlzGmmnRzbCpcrzl", "ZPbfgBvcZPPZPWWWWBFbQllndnqdnlpwdSNfnwdN", "LzLrzDhmDRRJpJzptDhCSCqHMHqnqSlHqMSQNHQS", "zTsRzsDTJszzrrLRstrGJLsPpbVVPbcgTBcZvbPVFggbjP", "THpVHSrLZrzzvPtJdtsqLssdLW", "fbfCCQgQllWwwwFmjRsPcqcPsJJJdscPdmsP", "RNQlQgCFfgwVppWTNvGrvn", "PqFwwcqzDlFJDDQVMjQmMBjG", "ZgTZZndCpBMVNTvvQc", "pHgtZdtRnnLhcshdhWzWSFlbsJsqzzzbSb", "zjfgjMhhgMJdfHQHWdVQvR", "CrmpmpZpHQptHHHQ", "CnwcFbNCqQBFwwFFsPslJgsjhMlMcDJP", "HpnStLpnQnHnqQLQqpMSSWWZbswNcNqwbNsfwqGGZc", "dVRRTCTVJNLcfJcJFb", "gzjTRCddgLDdzdjCCrBjjdhhBnQPSSBhvlSBQvMhQMnt", "lFTlwMwZlblSjrCpVvvsptspZpps", "nHRPPnqnhPRqJHhqqhfdPqLCHvBCvvscvVNczztCCvsvtm", "RJDghDhRhhGPPqGhsPhhFSbbwGSFjGQlWTrbwQbW", "RRjgNPTRFhglgNNjTsmGqCCGZfzmHCnZGnZCqq", "SppWLbtbCzZMpHMZ", "dSDbbJdVVlHFNlll", "dtZdGmqqtmzhtqZtZswzSnSjfNHNVjzCWCnCffHz", "LgpMFMvlhvRMhhDDlvvQLFJCfSCHnFVJnSnJHNjSnj", "rRBLcQcpQcrZbwsZshbs"];
+
+const valueString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+const giveValue = (str) => {    
+    const compartmentOne = str.substring(0, str.length/2);
+    const compartmentTwo = str.substring(str.length - (str.length/2));
+    //console.log(compartmentOne);
+    //console.log(compartmentTwo);
+    for (i=0; i<compartmentOne.length;i++) {
+        if(compartmentTwo.includes(compartmentOne[i])) {
+            const double = compartmentOne[i];
+            //console.log(double);
+            const charValue = (valueString.indexOf(double)) + 1;
+            //console.log(charValue);
+            return charValue;
+        };
+    };
+};
+
+const countValue = (array) => {
+    let totalValue = 0;
+    for (j=0; j<array.length; j++) {
+        const waarde = giveValue(array[j]);
+        totalValue = totalValue + waarde;
+    };
+    console.log(totalValue);
+};
+
+countValue(testData);
+countValue(realData);
+
+
+const findItem = (str1, str2, str3) => {  
+    for (j=0; j<str1.length; j++) {
+        if (str2.includes(str1[j]) && str3.includes(str1[j])) {
+            const triple = str1[j];
+            //console.log(triple);
+            const charValue = (valueString.indexOf(triple)) + 1;
+            //console.log(charValue);
+            return charValue;
+        };
+    };
+};
+
+//findItem(testData[0], testData[1], testData[2]);
+
+const addValues = (array) => {
+    let totalValue = 0;
+    for (i=0; i<(array.length)/3; i++) {
+        const strOne = array[3*i];
+        const strTwo = array[3*i+1];
+        const strThree = array[3*i+2];
+        const itemValue = findItem(strOne, strTwo, strThree);
+        totalValue = totalValue + itemValue;
+    };
+    console.log(totalValue);
+}
+
+addValues(testData);
+addValues(realData);
